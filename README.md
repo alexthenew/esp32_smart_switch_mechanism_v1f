@@ -1,7 +1,15 @@
-# AirSwitch : esp32_smart_switch_mechanism_v1f
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c2c642bc-b950-4546-a7f7-ddeab13150f7" width="400">
+  <img src="https://github.com/user-attachments/assets/e9dcf80e-d102-453d-8519-50d3614e7a82" width="400">
+</div>
+
+# AirSwitch : ESP32 Smart Switch Mechanism
+
 A HomeKit compatible non-invasive smart switch mechanism, powered by ESP32.
 
 This project is an Apple HomeKit-enabled smart switch pusher built with ESP32 and the HomeSpan library. It upgrades traditional lighting into smart home appliances by physically toggling wall switches using servo motors.
+
+---
 
 ## ✨ Features
 * **Native HomeKit Support**: Direct pairing with Apple devices without requiring additional bridges like Homebridge.
@@ -20,11 +28,18 @@ This project is an Apple HomeKit-enabled smart switch pusher built with ESP32 an
 
 ## 📱 Pairing Information
 When adding the accessory in the Apple Home app, enter the following setup code:
-* **Pairing Code**: `111-22-333`
+* **Pairing Code**: `11122333`
+
+## 🙏 Acknowledgments
+* Apple HomeKit integration is powered by the awesome [HomeSpan](https://github.com/HomeSpan/HomeSpan) library.
+* Servo motor control on ESP32 is handled by the [ESP32Servo](https://github.com/madhephaestus/ESP32Servo) library.
+* The geometric wall art pattern on the 3D printed case was sourced from MakerWorld. (If you are the original author, please let me know so I can properly credit you!)
 
 ---
 
 # 繁體中文說明 (Traditional Chinese)
+
+## AirSwitch : ESP32 智能開關物理機構
 
 這是一個基於 ESP32 與 HomeSpan 開發的 Apple HomeKit 智能開關推手專案。
 透過伺服馬達物理推動牆壁開關，將傳統電燈升級為智慧家電。
@@ -46,4 +61,9 @@ When adding the accessory in the Apple Home app, enter the following setup code:
 
 ## 📱 配對資訊
 在 Apple「家庭」App 中加入配件時，請輸入以下配對碼：
-* **Pairing Code**: `111-22-333`
+* **Pairing Code**: `11122333`
+
+## 🙏 鳴謝
+* 本專案的 HomeKit 連線底層，高度仰賴強大的 [HomeSpan](https://github.com/HomeSpan/HomeSpan) 開源函式庫。
+* 伺服馬達控制採用針對 ESP32 優化的 [ESP32Servo](https://github.com/madhephaestus/ESP32Servo) 函式庫。
+* 3D 列印外殼上的牆面藝術圖騰取自 MakerWorld 的開源設計。（因遺失原模型連結，若您是原作者，歡迎聯繫我以補上正確的授權資訊！）
