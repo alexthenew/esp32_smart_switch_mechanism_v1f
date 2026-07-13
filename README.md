@@ -1,5 +1,30 @@
-# esp32_smart_switch_mechanism_v1f
-A HomeKit compatible non-invasive smart switch mechanism, powered by ESP 32.
+# AirSwitch : esp32_smart_switch_mechanism_v1f
+A HomeKit compatible non-invasive smart switch mechanism, powered by ESP32.
+
+This project is an Apple HomeKit-enabled smart switch pusher built with ESP32 and the HomeSpan library. It upgrades traditional lighting into smart home appliances by physically toggling wall switches using servo motors.
+
+## ✨ Features
+* **Native HomeKit Support**: Direct pairing with Apple devices without requiring additional bridges like Homebridge.
+* **Non-blocking State Machine**: Utilizes `millis()` instead of `delay()` to ensure uninterrupted HomeSpan background connections.
+* **Inrush Current Protection**: If both motors receive commands simultaneously, their startup times are offset by 500ms to protect the ESP32's power stability.
+* **Auto-detach Sleep Mode**: Motors automatically `detach()` after toggling to prevent continuous power draw, overheating, and unnecessary noise.
+
+## 🔌 Hardware Configuration
+* **Microcontroller**: ESP32
+* **Actuators**: SG90 Servo Motor x 2
+
+| Device Name | GPIO Pin | Rest Angle | On Angle | Off Angle | Startup Delay |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Window Light | 16 | 90° | 55° | 125° | 0 ms |
+| Door Light | 17 | 90° | 55° | 125° | 500 ms |
+
+## 📱 Pairing Information
+When adding the accessory in the Apple Home app, enter the following setup code:
+* **Pairing Code**: `111-22-333`
+
+---
+
+# 繁體中文說明 (Traditional Chinese)
 
 這是一個基於 ESP32 與 HomeSpan 開發的 Apple HomeKit 智能開關推手專案。
 透過伺服馬達物理推動牆壁開關，將傳統電燈升級為智慧家電。
